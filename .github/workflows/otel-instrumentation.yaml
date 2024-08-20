@@ -30,4 +30,4 @@ jobs:
 
         run: |
           docker build . --tag ghcr.io/adaptivekind/example-otel-instrumentation:latest
-          docker push ghcr.io/adaptivekind/example-otel-instrumentation:ubuntu-latest
+          docker push ghcr.io/adaptivekind/example-otel-instrumentation:latest
