@@ -1,5 +1,5 @@
 FROM node:latest
-COPY api.js .
+COPY index.js .
 USER node
 EXPOSE 3000
 CMD [ "node", "index.js" ]
