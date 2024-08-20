@@ -24,7 +24,7 @@ jobs:
       - name: "Build and deploy image"
         uses: docker/build-push-action@v6
         with:
-          context: apps/otel-instrumentation
+          context: ./apps/otel-instrumentation
           platforms: linux/amd64,linux/arm64
           push: true
           tags: example-otel-instrumentation:latest
