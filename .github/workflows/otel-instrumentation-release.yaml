@@ -13,7 +13,7 @@ jobs:
     steps:
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
-      
+
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
 
@@ -27,7 +27,7 @@ jobs:
       - name: "Build and deploy image"
         uses: docker/build-push-action@v6
         with:
-          file: apps/otel-instrumentation/Dockerfile
+          context: apps/otel-instrumentation
           platforms: linux/amd64,linux/arm64
           push: true
           tags: example-otel-instrumentation:latest
