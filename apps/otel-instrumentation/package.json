@@ -1,0 +1,12 @@
+{
+  "name": "otlp-instrumentation",
+  "version": "1.0.0",
+  "description": "OTLP instrumentation",
+  "main": "index.js",
+  "scripts": {},
+  "license": "ISC",
+  "dependencies": {
+    "@opentelemetry/api": "^1.9.0",
+    "@opentelemetry/auto-instrumentations-node": "^0.49.1"
+  }
+}

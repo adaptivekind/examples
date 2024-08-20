@@ -5,7 +5,7 @@ an HTTP port and return JSON.
 
 Run locally
 
-    node api.js
+    node index.js
 
 Run in Docker
 
