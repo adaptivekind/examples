@@ -1,5 +1,5 @@
 # Deploy otel instrumentation image to GitHub container registry
-name: Deploy otel instrumentation image
+name: Build otel instrumentation image
 
 on:
   push:
@@ -19,15 +19,6 @@ jobs:
       - name: "Checkout GitHub Action"
         uses: actions/checkout@main
 
-      - name: "Login to GitHub Container Registry"
-        uses: docker/login-action@v3
-        with:
-          registry: ghcr.io
-          username: ${{github.actor}}
-          password: ${{secrets.ACCESS_TOKEN}}
-
       - name: "Build image"
-
         run: |
           docker build . --tag ghcr.io/adaptivekind/example-otel-instrumentation:latest
-          docker push ghcr.io/adaptivekind/example-otel-instrumentation:latest
