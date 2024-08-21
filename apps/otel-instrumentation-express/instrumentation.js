@@ -25,7 +25,6 @@ const {
 } = require('@opentelemetry/exporter-metrics-otlp-http');
 
 const sdk = new NodeSDK({
-  traceExporter: new ConsoleSpanExporter(),
   metricReader: new PeriodicExportingMetricReader({
     exporter:
       process.env.OTEL_METRICS_EXPORTER === "console"
