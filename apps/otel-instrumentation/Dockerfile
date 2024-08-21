@@ -1,10 +1,15 @@
-FROM node:latest
+FROM node:22.6.0 AS build
 WORKDIR /app
 COPY index.js .
+COPY instrumentation.js .
 COPY package.json .
 COPY package-lock.json .
 RUN npm install --omit=dev
-USER node
+
+FROM gcr.io/distroless/nodejs22-debian12
+COPY --from=build /app /app
+WORKDIR /app
 EXPOSE 3000
-CMD [ "node", "index.js" ]
+ENV NODE_OPTIONS="--require ./instrumentation.js"
+CMD [ "index.js" ]
 
