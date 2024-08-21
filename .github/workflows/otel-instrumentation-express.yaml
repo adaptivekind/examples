@@ -1,4 +1,4 @@
-name: Build OpenTelementry instrumentation with Express image
+name: Build OTEL Express image
 
 on:
   push:

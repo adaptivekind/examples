@@ -1,4 +1,4 @@
-name: Build OpenTelementry instrumentation image
+name: Build OTEL image
 
 on:
   push:

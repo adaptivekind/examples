@@ -1,4 +1,4 @@
-name: Deploy OpenTelemetry instrumentation Express example image
+name: Deploy OTEL Express image
 
 on:
   workflow_dispatch:
