@@ -1,4 +1,4 @@
-name: Deploy OTEL image
+name: OTEL image
 
 on:
   workflow_dispatch:

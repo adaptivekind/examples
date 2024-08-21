@@ -1,4 +1,4 @@
-name: Deploy OTEL Express image
+name: OTEL Express image
 
 on:
   push:
