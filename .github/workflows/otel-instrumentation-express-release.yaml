@@ -1,4 +1,4 @@
-name: Deploy OpenTelemetry instrumentation example image
+name: Deploy OpenTelemetry instrumentation Express example image
 
 on:
   workflow_dispatch:
@@ -26,7 +26,7 @@ jobs:
       - name: "Build and deploy image"
         uses: docker/build-push-action@v6
         with:
-          context: ./apps/otel-instrumentation
+          context: ./apps/otel-instrumentation-express
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: ghcr.io/adaptivekind/example-otel-instrumentation:latest
+          tags: ghcr.io/adaptivekind/example-otel-instrumentation-express:latest

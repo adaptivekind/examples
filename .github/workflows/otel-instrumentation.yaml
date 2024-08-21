@@ -1,5 +1,4 @@
-# Deploy otel instrumentation image to GitHub container registry
-name: Build otel instrumentation image
+name: Build OpenTelementry instrumentation image
 
 on:
   push:
@@ -21,4 +20,4 @@ jobs:
 
       - name: "Build image"
         run: |
-          docker build . --tag ghcr.io/adaptivekind/example-otel-instrumentation:latest
+          docker build .

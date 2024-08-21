@@ -1,0 +1,23 @@
+name: Build OpenTelementry instrumentation with Express image
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - apps/otel-instrumentation-express/**
+  workflow_dispatch:
+
+jobs:
+  push-image:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: apps/otel-instrumentation-express
+    steps:
+      - name: "Checkout GitHub Action"
+        uses: actions/checkout@main
+
+      - name: "Build image"
+        run: |
+          docker build .
